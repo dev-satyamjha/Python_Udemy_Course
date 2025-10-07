@@ -1,0 +1,1 @@
+It contains my prgress report of Udemy's Python Course conducted by Federico Azzurro (owner of Indently YT Channel)
