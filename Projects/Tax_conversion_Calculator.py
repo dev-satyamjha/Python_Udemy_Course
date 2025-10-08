@@ -1,3 +1,5 @@
+#Make a basic tax conversion calculator with additional conditions like yearly income being doubled and tripled
+
 income: float = float(input("Enter your yearly income in ₹: "))
 tax_rate: float = float(input("Enter tax rate % : ")) / 100
 taxed: float = float(income * tax_rate)
