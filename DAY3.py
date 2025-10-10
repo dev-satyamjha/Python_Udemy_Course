@@ -19,3 +19,10 @@ mix.insert(3,'Satyam') #insert element at 3rd Index
 print(mix)
 mix[1] = 'Roman' #replace element at 1st index
 print(mix)
+
+#tuples
+tuple1: tuple[int, str , bool] = (2,'Photo',True)
+print(tuple1)
+tuple2: tuple[int,...] = (1,2,3,4,5,5,6,7)
+print(tuple2)
+print(len(tuple2))
