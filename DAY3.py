@@ -26,3 +26,37 @@ print(tuple1)
 tuple2: tuple[int,...] = (1,2,3,4,5,5,6,7)
 print(tuple2)
 print(len(tuple2))
+
+#sets
+my_set: set[int] = {1,2,3,4,5,6,7,7,8,9,0,0}
+print(my_set)
+set_1: set[int | bool | str] = {1,2,3,4,0,5,True,False, 'Satyam', 'Roman'} #true and false are treated as duplicate values here
+print(set_1)
+set_2: set[int] = {1,4,7}
+set_3: set[int] = {6,1,9}
+set_2.add(5)
+print(set_2)
+set_3.remove(1)
+print(set_3)
+print(set_2.union(set_3))
+print(set_2 | set_3)
+set_4 : set[str] = {'Allu', 'Ram', 'NTR'}
+set_4.update(['Nani', 'Unni'])
+print(set_4)
+set_5: set[int] = {12,10,9,5,7}
+set_6: set[int] = {9,10,12,6,8}
+print(set_5.intersection(set_6))
+#set_5.intersection_update(set_6)
+#print(set_5)
+print(set_5.difference(set_6))
+#set_6.difference_update(set_5)
+#print(set_6)
+print(set_5.symmetric_difference(set_6))
+set_5.symmetric_difference_update(set_6)
+print(set_5)
+
+#frozen sets
+fs: frozenset[int | str] = frozenset([1,2,3,4,'Happy','Passionate', 'Confident'])
+print(fs)
+name : set[str] = ({'Globe', 'India', 'Best'})
+print(name | {f'Proud','Indian'})
