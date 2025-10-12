@@ -60,3 +60,35 @@ fs: frozenset[int | str] = frozenset([1,2,3,4,'Happy','Passionate', 'Confident']
 print(fs)
 name : set[str] = ({'Globe', 'India', 'Best'})
 print(name | {f'Proud','Indian'})
+
+#Dictionary
+
+person: dict[str, str] = {'name': 'Satyam', 'occupation': 'Actor'}
+print(person)
+person: dict[str, str | int] = {'name': 'Satyam', 'age': 22}
+print(person)
+empty: str = dict() # Prints empty dictionary
+print(empty)
+person: dict[str, str | float] = {'name': 'Satyam', 'age': 22, 'height': 5.7, 'color': 'brown'}
+print(person.keys())
+print(person.values())
+print(person.items())
+print(list(person.values()))
+print('Satyam' in person.values())
+print(person[('name')])
+print(person.get('age'))
+print(person.get('Harsh'))
+person['Gender'] = 'male'
+print(person)
+del person['height']
+print(person)
+person['Eyes'] = 'black'
+print(person)
+person.pop('Eyes')
+print(person)
+person.update({'name': 'Allu Arjun', 'age': 42,})
+print(person)
+A: dict[str, str] = {'name' : 'Satyam', 'dream': 'IAS', 'schooling' : 'no', 'college': 'yes'}
+B: dict[str, str] = {'name': 'Harsh', 'dream': 'Normal person', 'schooling': 'no', 'college': 'yes'}
+C = A | B
+print(C)
