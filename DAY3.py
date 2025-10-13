@@ -92,3 +92,20 @@ A: dict[str, str] = {'name' : 'Satyam', 'dream': 'IAS', 'schooling' : 'no', 'col
 B: dict[str, str] = {'name': 'Harsh', 'dream': 'Normal person', 'schooling': 'no', 'college': 'yes'}
 C = A | B
 print(C)
+
+#None
+
+user1 : str | None = None
+print(user1)
+
+user2 : str | None = None
+if user1:
+    print("User selected is" , user2)
+else :
+    print("No user is selected....")
+
+user3 : str | None = 'Satyam'
+if user3:
+    print("User selected is" , user3)
+else :
+    print("No user is selected....")
