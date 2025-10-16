@@ -72,3 +72,12 @@ print(a or b or c)
 print(a and b and c)
 print(not a == False)
 print(not(a and b))
+
+#Identity Operators
+
+i: list[int] = {1,2,3}
+i1: list[int] = {1,2,3}
+print(i is i)
+print(i is i1)
+print(i is not i1)
+print(i is not i)
