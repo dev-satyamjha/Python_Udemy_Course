@@ -81,3 +81,14 @@ print(i is i)
 print(i is i1)
 print(i is not i1)
 print(i is not i)
+
+#Membership Operators
+person: list[str] = ['Sats', 'Anks', 'Satyam', 'Divya']
+print('Anks' in person)
+
+group: dict[str, int|str]=  {'Name':'Satyam', 'Age': 22, 'DOB': 12122003,}
+print('Satyam' in group.values())
+print('Age' in group.keys())
+print('DOB' in group.values())
+term: str = 'Diwali'
+print(term in 'Happy Diwali!')
