@@ -8,3 +8,9 @@ elif name == "Satyam":
     print(f"I already told that you can vote {name}!!")
 else:
     print(f"You can vote after {18 - age} years(s)")
+
+#If else Shortened
+
+condition: bool = True
+result: str = 'Yes' if condition else 'No'
+print(result)
