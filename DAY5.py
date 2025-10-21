@@ -14,3 +14,13 @@ else:
 condition: bool = True
 result: str = 'Yes' if condition else 'No'
 print(result)
+
+age = int(input("Enter your age: "))
+message: str = 'You can get married!!' if age>= 21 else (f"Wait for {21 - age} years to get married...!!")
+print(message)
+
+n = int(input("Enter a number: "))
+print('Even Number' if n%2==0 else 'Odd Number!!' )
+
+state : bool = True
+print('I will pass') if state else print('I will fail for sure!!')
