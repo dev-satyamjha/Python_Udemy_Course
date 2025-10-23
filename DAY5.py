@@ -108,6 +108,37 @@ while num>0:
         break
 print('----------------------------------')
 
+# else loop
+names: list[str]= ['India', 'Satyam', 'Army', 'Allu Arjun', 'Keerthy', 'Priyanka']
+for n1 in names:
+    print(n1)
+else:
+    print("Everyone's name is printed!!")
+print('----------------------------------')
+
+i4: int = 0
+while i4 < 10:
+    i4 += 1
+    print(f"Current number is: {i4}")
+else:
+    print("Loop wasn't interrupted")
+print('----------------------------------')
+
+i5: int = 0
+while i5 > 10:
+    i5 += 1
+    print(f"Current number is: {i5}")
+else:
+    print("Loop was interrupted")
+print('----------------------------------')
+
+emp : list[str] = []
+for e in emp:
+    print(e)
+else:
+    print("List is empty!!")
+print('----------------------------------')
+
 while True:                             # Infinite Loop
     inp = str(input("Enter a name: "))
     print(f"The name is: {inp}")
