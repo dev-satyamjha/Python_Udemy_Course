@@ -23,20 +23,21 @@ print('(Type "even" if you want to split the bill equally.)')
 people_dict: dict[str, float] = {}
 total_percent: float = 100.0
 for person in people:
-    percent_input: str = input(f"[{total_percent:.0%}remaining] {person.captialize():}").capitalize()
+    percent_input: str = input(f"[{total_percent:.0f}% remaining] {person.capitalize()}: ").capitalize()
 
     if percent_input.strip() == '':
         percent_input = '0'
-    if percent_input.strip() == 'even':
+    elif percent_input == 'Even':
         for nested_person in people:
             people_dict[nested_person] = (1/len(people)) * total_bill
-            break
+        break
+
     else:
-      people_dict[person] = (float(percent_input)/100) * total_bill
-      total_percent -= float(percent_input)
+        people_dict[person] = (float(percent_input)/100 * total_bill)
+        total_percent -= float(percent_input)
 
 # Step 4
 print('\n---Split Summary---')
 for name, share in people_dict.items():
-    print(f'{name.capitalize(): 10}: ₹{share: , .2f}')
+    print(f'{name.capitalize():10}: ₹{share:,.2f}')
 print('----------------------')
