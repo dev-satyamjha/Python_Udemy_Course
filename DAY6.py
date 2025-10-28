@@ -21,8 +21,8 @@ if test:
 else:
     print("Test is not happening tommorow!!")
 
-#Parameters
-def greet(name: str, language: str):
+#Parameters and Arguments
+def greet1(name: str, language: str):
     if language == 'IN':
         print(f"Namaste, {name}!!")
     elif language == 'EN':
@@ -30,13 +30,21 @@ def greet(name: str, language: str):
     else :
         print(f"Hello, {name}!!")
 
-greet('Satyam', 'IN')
-greet('Roman', 'EN')
-greet('Patron', 'IT')
+greet1('Satyam', 'IN')
+greet1('Roman', 'EN')
+greet1('Patron', 'IT')
 
-def loop(times:int, text: str):
+def loop1(times:int, text: str):
     for i in range(times):
         print(f"{text} : {i+1}")
-loop(1, 'A')
-loop(2, 'B')
-loop(3, 'C')
+loop1(1, 'A')
+loop1(2, 'B')
+loop1(3, 'C')
+
+def greet2(name: str, greeting: str = 'Hey!'):  #default param
+    print(f"{greeting} {name}, how are you?")
+greet2('Indently')
+
+def add(label: str , a: int, b: int):
+    print(f"{label}: {a + b}")
+add('My sum is', 45, 90)
