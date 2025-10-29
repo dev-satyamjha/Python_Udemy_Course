@@ -49,7 +49,7 @@ def add(label: str , a: int, b: int):
     print(f"{label}: {a + b}")
 add('My sum is', 45, 90)
 
-#return
+#Return
 
 def add1(a:float, b:float) -> float:
     return a + b
@@ -77,5 +77,38 @@ print(search('Satyam', db))
 print(search('Allu Arjun', db))
 print(search('Keerthy', db))
 print(search('Undertaker', db))
+
+print('----------------------------------')
+
+#Recursion
+
+import time
+connection: bool = False
+def connect(tries : int = 3) -> None:
+    if tries != 0 :
+        print("Attempting to Connect...")
+        time.sleep(1)
+        if connection :
+            print('Wohoo..We are connected!!')
+        else:
+            print("Uh oh! Failed to connect")
+            connect(tries - 1)
+    else:
+        print("Maximum limit reached..!")
+
+connect()
+
+print('----------------------------------')
+
+n = int(input("Enter a number: "))
+def fibonacci(n: int) -> int:
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n -1) + fibonacci(n - 2)
+for i in range (n):
+    print(fibonacci(i))
 
 print('----------------------------------')
