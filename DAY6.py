@@ -48,3 +48,34 @@ greet2('Indently')
 def add(label: str , a: int, b: int):
     print(f"{label}: {a + b}")
 add('My sum is', 45, 90)
+
+#return
+
+def add1(a:float, b:float) -> float:
+    return a + b
+
+print(add1(1 , 2))
+print(add1(87 , 67))
+
+def person(name:str) -> str:
+    return name.capitalize()
+print(person('satyam'))
+print(person('ROMAN'))
+
+print('----------------------------------')
+
+def search(user:str, db:dict[str, int]) -> int | None :
+    print(f"Seraching for {user}...")
+    if user in db.keys():
+        print(f"{user} is found...!")
+    else:
+        print(f"{user} is not found...!")
+    return db.get(user)
+
+db: dict[str, int] = {'Satyam' : 12, 'Allu Arjun': 8, 'Roman' : 7, 'Keerthy': 20}
+print(search('Satyam', db))
+print(search('Allu Arjun', db))
+print(search('Keerthy', db))
+print(search('Undertaker', db))
+
+print('----------------------------------')
