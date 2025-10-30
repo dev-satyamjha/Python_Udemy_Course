@@ -1,4 +1,4 @@
-from datetime import datetime, datetime_CAPI
+from datetime import datetime
 
 def contains(terms: list[str] , contents: str):
     matches: list[bool] = []
