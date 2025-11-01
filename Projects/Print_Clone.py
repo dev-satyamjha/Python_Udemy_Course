@@ -5,12 +5,16 @@ def print_func(
     end: str | None = '\n',
     caps: bool = False,
     count: bool = False,
+    ascii: bool = False,
     include_types: bool = False) -> None:
 
         new_vals: list[Any] = []
         for value in values:
             if isinstance(value, str) and caps:
                 new_vals.append(value.upper())
+            if isinstance(value,str) and ascii:
+                value= [ord(char) for char in value]
+                new_vals.append(value)
             else:
                 new_vals.append(value)
 
@@ -30,3 +34,5 @@ print_func('satyam', 'allu arjun', 12, include_types=True, caps= True, sep = ','
 
 print_func('[System, Hang, Roman]','satyam', 'allu arjun', False, (2,4,6,8,10), 12, include_types=True, caps= True, sep = ',', end='!')
 print_func('[System, Hang, Roman]','satyam', 'allu arjun', False, (2,4,6,8,10), 12, count=True, caps= True, sep = ',', end='.')
+print()
+print_func('Satyam', 'hello', count=True, caps= True, ascii=True,sep = ', ' , end='.' )
