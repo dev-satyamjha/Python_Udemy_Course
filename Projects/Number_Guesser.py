@@ -33,4 +33,3 @@ while True:
 
         random_num: int = random.randint(Lower_limit, Upper_limt)
         attempts = 0
-        continue
