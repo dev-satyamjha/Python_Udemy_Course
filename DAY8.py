@@ -78,3 +78,37 @@ finally:
         print("File is closed!")
 
 print('----------------------------------')
+
+#raise
+
+def set_age(age:int) -> None:
+    if age < 0:
+        raise ValueError ("Age can't be a negative!")
+    print(f" Age set to : {age}")
+set_age(-10)
+
+print('----------------------------------')
+
+password: str = 'test123'
+if len(password) < 8:
+    raise Exception ("Password can't be less than 8 characters")
+print(password)
+
+print('----------------------------------')
+
+#Genereic Exceptions
+
+try:
+    num: int = int('ten')
+except Exception as e:
+    print(f"Error Message: {e} ({type(e)})")
+
+try:
+    res: int = int('10')
+    print(res/20)
+    raise Exception('I can\'t divide')
+except (TypeError, ValueError) as e:
+    print(f"Error message: {e}")
+except Exception as e:
+    print(f"Error message: {e} ({type(e)})")
+    print("Sending logs to dev team!!")
