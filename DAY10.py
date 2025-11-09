@@ -1,4 +1,4 @@
-from decimal import Decimal
+from decimal import Decimal, getcontext
 
 # Truthy
 
@@ -39,8 +39,30 @@ print(bool(none_type))
 
 #Float problem
 
-a = Decimal(0.1)
-b = Decimal(0.2)
-c = Decimal(0.3)
+a = Decimal('0.1')
+b = Decimal('0.2')
+c = Decimal('0.3')
 
-print(a)
+print((a+b) == c)
+
+getcontext().prec = 4
+
+d = Decimal('0.1000100')
+e = Decimal('0.1000123')
+print(d == e)
+print(d+e)
+print((d+e)== Decimal('0.2'))
+print(float(d) + 12)
+
+#Scopes
+
+def greet(name:str) -> None:
+    greeting: str = 'Hey! Hello..'         #Defined under function(local scope)
+    print(f"{greeting}, how are you..{name}?!")
+
+name: str = 'Satyam' #Global Scope
+
+def run() -> None:
+    greet(name)
+
+run()
