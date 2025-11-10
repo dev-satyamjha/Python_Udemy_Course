@@ -66,3 +66,14 @@ def run() -> None:
     greet(name)
 
 run()
+
+#Global
+
+x: int = 12
+
+def test_x() -> None:
+    global x
+    x = 123
+
+test_x()
+print(x)
