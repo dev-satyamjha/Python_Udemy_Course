@@ -1,3 +1,4 @@
+from curses import nonl
 from decimal import Decimal, getcontext
 
 # Truthy
@@ -77,3 +78,42 @@ def test_x() -> None:
 
 test_x()
 print(x)
+
+
+y: int = 130
+
+def test_y() -> None:
+    print(y)
+
+test_y()
+print(y)
+
+#NonLocal
+
+x1: int = 100
+def funct() -> None:
+    y: int = 0
+    def change():
+        nonlocal y
+        y = 10
+    change()
+    print(y)
+funct()
+
+def a() -> None:
+    va: int = 0
+
+    def b() -> None:
+        vb : int = 0
+
+        def c() -> None:
+            nonlocal va , vb
+
+            va = 12
+            vb = 21
+
+        c()
+        print(va)
+        print(vb)
+    b()
+a()
