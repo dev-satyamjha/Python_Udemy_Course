@@ -1,4 +1,3 @@
-from curses import nonl
 from decimal import Decimal, getcontext
 
 # Truthy
