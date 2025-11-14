@@ -24,3 +24,17 @@ print(vowels)
 print('Count of vowels:', len(vowels))
 name: list[str] = ['Satyam', 'Harsh', 'Allu Arjun', 'Roman', 'Priyanka']
 print("Length of names: ", [len(names) for names in name])
+
+#Slicing
+
+people: list[str] = ['Satyam', 'Sung Jinwhoo', 'Anya Forger', 'Pikachu', 'Allu Arjun', 'Roman Reigns']
+
+print(people[:4])
+print(people[:2])
+print(people[:4] + people[4:6])
+print(people[3:6])
+
+numbers1: list[int] = list(range(20))
+print(numbers1[0:10:3])
+print(numbers1[20:0:-5])
+print(numbers1[::-2])
