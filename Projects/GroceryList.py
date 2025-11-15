@@ -4,20 +4,38 @@ def announcements(msg:str) -> None:
     print(f"System: {msg}")
 
 def add_item() -> None:
-    name: str = input("Enter an item: ").strip().capitalize()
+    consecutive_items = 0
     while True:
-        try:
-            quantity: int = int(input("Enter quantity: ") )
-            db[name] = quantity
-            announcements(f"Added : {name} x {quantity}")
-        except ValueError:
-            print('Error, you didn\'t input a valid number' )
+        name: str = input("Enter an item: ").strip().capitalize()
+        if name == "":
+            consecutive_items +=1
+            if consecutive_items == 2:
+                announcements("Returning to Main Menu... ")
+                return
             continue
-        if quantity < 0:
-            print("Quantity can't be negative ")
-            continue
-        else:
-            break
+
+            consecutive_items = 0
+
+        while True:
+            quantity = (input("Enter quantity: ") ).strip()
+            if quantity == "":
+                print("Quantity cannot be empty. Please enter a number.")
+                continue
+
+            try:
+                Quantity = int(quantity)
+
+            except ValueError:
+                print('Error, you didn\'t input a valid number' )
+                continue
+
+            if Quantity < 0:
+                print("Quantity can't be negative ")
+                continue
+            else:
+                break
+        db[name] = quantity
+        announcements(f"Added : {name} x {quantity}")
 
 
 def remove_item() -> None:
@@ -33,10 +51,35 @@ def read_list() -> None:
         print("<--------------------------------------------->")
         for k, v in db.items():
             print(f"{k.capitalize()}: {v}")
-            print('-'*40)
+            print('-'*20)
     else:
         announcements("There are no groceries in the list..!!")
 
+
+def modify_quantity() -> None:
+    name: str = input("Enter item to modify: ").strip().capitalize()
+    if name not in db:
+        print("Item not present in list")
+        return
+    current = db[name]
+    print(f"Current quantity for selected item: {current}")
+    while True:
+        new = input("Enter the new quantity: ").strip()
+
+        try:
+            new_qty = int(new)
+
+        except ValueError:
+            print("Please enter a valid number!")
+            continue
+
+        if new_qty < 0:
+           print("Items can't be negative!")
+           continue
+        else:
+           break
+    db[name] = new_qty
+    announcements(f"Updated Qunatity: {new_qty}")
 
 
 def display_options():
@@ -46,7 +89,9 @@ def display_options():
     print("3.Remove from List")
     print("4.Read List")
     print("5.Modify Quantity")
-    print("<--------------------------------------------->")
+    print("6.Quit")
+    print("Press Enter twice under Option 2 to return to Main Menu")
+    print("------")
 
 def get_options(option:str):
     try:
@@ -63,7 +108,13 @@ def get_options(option:str):
         remove_item()
     elif converted == 4:
         read_list()
-
+    elif converted == 5:
+        modify_quantity()
+    elif converted == 6:
+        announcements("Serve you soon!")
+        raise SystemExit
+    else:
+        announcements("No such option exists..Enter any option between 1 to 6")
 def main() -> None:
     display_options()
 
