@@ -38,3 +38,35 @@ numbers1: list[int] = list(range(20))
 print(numbers1[0:10:3])
 print(numbers1[20:0:-5])
 print(numbers1[::-2])
+
+#Looping Problem
+
+people1: list[str] = ['Satyam', 'Ben', 'Allu Arjun', 'Joginder', 'Harsh', 'Roman', 'Dhoni']
+people_new: list[str] = []
+
+for person in people1:
+    if person == 'Harsh':
+        people1.remove('Harsh')
+
+    print(person)
+
+print('----------------------------------')
+
+for person in people1.copy():
+    if person == 'Harsh':
+        people1.remove('Harsh')
+        continue
+
+    print(person)
+
+print(people1)
+
+print('---------------------------------------------------------------')
+
+for per in people1:
+    if per == 'Harsh':
+        continue
+    people_new.append(per)
+    print(per)
+
+print(people_new)
