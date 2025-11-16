@@ -14,7 +14,6 @@ def add_item() -> None:
                 return
             continue
 
-            consecutive_items = 0
 
         while True:
             quantity = (input("Enter quantity: ") ).strip()
@@ -34,7 +33,7 @@ def add_item() -> None:
                 continue
             else:
                 break
-        db[name] = quantity
+        db[name] = Quantity
         announcements(f"Added : {name} x {quantity}")
 
 
