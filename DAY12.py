@@ -73,3 +73,24 @@ print('-'*57)
 AA_Account.deposits(-12)
 AA_Account.display_balance()
 print('-'*57)
+
+#Self
+
+class Worker:
+    def __init__(self, name: str, age: int, professsion: str) -> None:
+        self.name = name
+        self.age = age
+        self.profession = professsion
+
+    def info(self):
+        print(f"__Info: {self.name}__")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Profession: {self.profession}")
+Harsh: Worker = Worker('Harsh', 19, 'Coder')
+Dheeraj: Worker = Worker('Dheeraj', 20, 'Coder')
+HarshPratap: Worker = Worker('Harsh Pratap', 21, 'LeetCoder')
+
+Harsh.info()
+Dheeraj.info()
+HarshPratap.info()
