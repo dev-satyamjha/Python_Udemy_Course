@@ -1,9 +1,5 @@
 # Instance Attributes
 
-from ast import Num
-from pickletools import float8
-
-
 class Car:
     year: int = 2022
 
