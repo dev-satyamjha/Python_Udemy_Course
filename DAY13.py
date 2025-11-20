@@ -40,3 +40,20 @@ class Number:
 
 print(Number(10) + Number(20))
 print(Number(10) * Number(20))
+
+#__str__ vs __repr__
+
+class Computer:
+    def __init__(self, brand: str, price: int) -> None:
+        self.price = price
+        self.brand = brand
+
+    def __str__(self) -> str:
+        return f"Brand: {self.brand} and Price: {self.price}"
+
+    def __repr__(self) -> str:
+        return f"Computer(Brand : {self.brand} and its Price is {self.price}"
+
+linux: Computer = Computer('HP', 55000)
+print(linux)
+print(repr(linux))
