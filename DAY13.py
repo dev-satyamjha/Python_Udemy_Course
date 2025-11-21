@@ -57,3 +57,22 @@ class Computer:
 linux: Computer = Computer('HP', 55000)
 print(linux)
 print(repr(linux))
+
+# __eq__
+
+class Account:
+    def __init__(self, account_num: int, name: str, balance: int ):
+
+        self.account_num = account_num
+        self.balance = balance
+        self.name = name
+
+    def __eq__(self, other: 'Account') -> bool:
+        return self.balance == other.balance
+
+satyam: Account = Account(121212, 'Satyam', 100000)
+harsh: Account = Account(110306, 'Harsh', 100000)
+
+print(id(satyam))
+print(id(harsh))
+print(satyam == harsh)
