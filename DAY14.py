@@ -1,3 +1,5 @@
+from datetime import date
+
 class Worker:
     def __init__(self, name: str):
         self.name = name
@@ -29,3 +31,23 @@ calc: Calculator = Calculator('Pro Model')
 
 calc.add(12.10,9)
 print(calc.add(12,10,9))
+
+#@classmethod
+
+class User:
+    def __init__(self, name: str, age: int) -> None:
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def birth_year(cls, name : str, year: int) -> 'User':
+        current_year: int = date.today().year
+        return cls(name, current_year - year)
+
+
+
+    def info(self) ->None:
+        print(f"The name is {self.name} and age is {self.age}.")
+
+Satyam : User = User.birth_year('Satyam', 2002)
+Satyam.info()
