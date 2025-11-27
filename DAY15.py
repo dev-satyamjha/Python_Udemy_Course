@@ -52,3 +52,15 @@ linux.power_on()
 linux.update()
 linux.security()
 linux.shut_down()
+
+#Name mangling
+
+class Account:
+    def __init__(self, owner: str, balance: int):
+        self.owner = owner
+        self.__balance = balance
+    def deposit(self, amount: int):
+        self.__balance += amount
+        print(f"{amount} is deposited in bank.")
+    def display(self):
+        print(f"Cuurent balance is : ₹ {self.__balance}")
