@@ -64,3 +64,20 @@ class Account:
         print(f"{amount} is deposited in bank.")
     def display(self):
         print(f"Cuurent balance is : ₹ {self.__balance}")
+
+class Savings(Account):
+    def __init__(self, owner: str) -> None:
+        super().__init__(owner,0)
+
+        self.__balance = 0
+
+    def deposit_into_savings(self, amount: int):
+        self.__balance += amount
+        print(f"₹{amount} deposited into savings.")
+
+    def savings_balance(self, amount: int):
+        print(f"Savings account balance: ₹{self.__balance}")
+
+account: Savings = Savings('Satyam')
+account.deposit(10000)
+account.deposit_into_savings(10000)
