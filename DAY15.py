@@ -1,5 +1,5 @@
 from uuid import uuid4, UUID
-
+from abc import ABC, abstractmethod
 # Inheritance
 
 class Animal:
@@ -110,3 +110,30 @@ cup: Product = Product('Cup')
 hat: Product = Product('Hat')
 print(cup.compare_product(hat))
 print(cup.compare_product(cup))
+
+
+# @abstractmethod
+
+class Comp(ABC):
+    @abstractmethod
+    def power_on(self):
+        ...
+    @abstractmethod
+    def power_off(self):
+        ...
+    @abstractmethod
+    def sell(self, price: int):
+        ...
+class Linus(Comp):
+    def __init__(self, name: str) -> None:
+        super().__init__()
+        self.name = name
+    def power_on(self) -> None:
+        print(f"{self.name} is booting up..!!")
+    def power_off(self):
+        pass
+    def sell(self, price: int):
+        pass
+
+linus: Linus = Linus('Satyam\'s Linux')
+linus.power_on()
