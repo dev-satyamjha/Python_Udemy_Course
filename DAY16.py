@@ -37,3 +37,15 @@ print(tuple(my_range))
 
 for i in range(10):
     print('I love my life..')
+
+#slice()
+
+my_slice: slice = slice(2,None,3)
+nums: list[int] = [1, 2, 3, 4, 6, 7, 8, 12, 14]
+words: str = 'Satyam is the coolest man on earth'
+print(nums[my_slice])
+print(words[my_slice])
+
+rev: slice = slice(None, None, -1)
+num: list[int] = [1, 5, 7, 9, 11, 13]
+print(num[rev])
