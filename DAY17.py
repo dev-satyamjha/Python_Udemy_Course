@@ -13,3 +13,15 @@ else:
     print("The list is non-empty.")
 
 print(all([]))
+
+#any()
+
+print(any(output))
+
+script : list[str] = ['System', 'Battery', 'Vehicle', '']
+if any(script):
+    print("Script is getting prepared..")
+else:
+    print("Script hasn't started yet...!")
+
+print(any([]))
