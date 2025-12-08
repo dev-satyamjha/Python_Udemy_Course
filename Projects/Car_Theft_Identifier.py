@@ -1,9 +1,12 @@
+import textwrap
+
 class Car:
     def __init__(self, number_plate: str):
-        if len(number_plate) != 6:
+        p = number_plate.strip()
+        if len(p) != 6:
             raise ValueError('Invalid Number Plate')
 
-        self.number_plate = number_plate
+        self.number_plate = p
 
 class StolenCar:
     def __init__(self):
@@ -23,12 +26,22 @@ class StolenCar:
     def is_stolen(self, plate:str) -> bool:
         return plate.upper() in self.stolen_plates
 
+    def total_stolen(self) -> int:
+        return len(self.stolen_plates)
+
 def main():
     registry: StolenCar = StolenCar()
-    registry.add_stolen_plates(['HYD999', 'BR6969', 'JH6969', 'DEL505', 'ERR404', 'SYS112', 'PUN601', 'GUJ100'])
+    registry.add_stolen_plates(['HYD999', 'BR6969', 'JH6969', 'DEL505', 'ERR404', 'SYS112', 'PUN601', 'GUJ100', 'ARY100'])
 
     print('-----Welcome to Car Theft Identifier-----')
-    print("Type 'remove <plate>' to remove a stolen plate")
+    prompt : str = textwrap.dedent('''
+    >Enter a number plate to check if it's stolen
+    >Type 'remove <plate>' to remove a stolen plate
+    >Type 'count' to get total stolen plates count
+    >Type 'display' to display stolen plate numbers
+    >Type 'exit' to exit the program
+    ''')
+    print(prompt)
     while True:
         plate: str = input('Enter car number plate: ').strip()
         if plate.lower().startswith('remove '):
@@ -43,6 +56,18 @@ def main():
             else:
                 print(f'🚫 {target.upper()} was not in the stolen registry.')
             continue
+
+        if plate.lower() == 'count':
+            print(f"Total stolen plate count: {registry.total_stolen()}")
+            continue
+
+        if plate.lower() == 'display':
+            print(f"Stolen plate numbers: {registry.stolen_plates}")
+            continue
+
+        if plate.lower() == 'exit':
+            print("Exiting....!!")
+            break
         try:
             car: Car = Car(plate)
         except ValueError as e:
