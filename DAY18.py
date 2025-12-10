@@ -38,3 +38,41 @@ def combine(a:Any, b: Any) ->str:
 
 combined: Iterator[str] = map(combine, numbers, short_names)
 print(list(combined))
+
+#Sorted
+
+nums = (1,2,3,4,5,6,7,8,9,99,10,23,12,45,61,21,70)
+print(sorted(nums))
+print(sorted(nums, reverse=True))
+
+names: list[str] = ['satyam', 'Amanda', 'annie', 'Abigail', 'alexa', 'Roman', 'ben', 'Misty']
+print(sorted(names))
+print(sorted(names, key=str.lower))
+
+def vowel_count(text:str) ->int:
+    return sum(1 for c in text if c in 'AEIOUaeiou')
+
+print(sorted(names, key=vowel_count, reverse=True))
+
+#Eval
+a = 12
+b = 10
+expr: str = 'a + b'
+print(eval(expr))
+
+james: str = '"james".upper()'
+print(eval(james))
+
+#eval
+
+code: str = '''
+name: str = 'Satyam'
+age: int = 23
+print(f"{name} is {age} years old")
+'''
+
+print(exec(code))
+
+x = 5
+exec('y=x+12')
+print(y)
