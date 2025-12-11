@@ -76,3 +76,11 @@ print(exec(code))
 x = 5
 exec('y=x+12')
 print(y)
+
+#Zip
+
+symbols: list[str] = ['@', '#', '&', '%', '*', '!']
+nums1: list[int] = [12, 24, 10, 20, 50, 100]
+
+zipped: Iterator[tuple[int, str]] = zip(nums1, symbols)
+print(list(zipped))
