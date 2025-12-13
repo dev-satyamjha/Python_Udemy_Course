@@ -1,0 +1,177 @@
+[
+  {
+    "activity": "Movie Night",
+    "type": "entertainment",
+    "environment": "indoor",
+    "cost": 1500,
+    "people": 4
+  },
+  {
+    "activity": "Hiking",
+    "type": "outdoor",
+    "environment": "outdoor",
+    "cost": 100000,
+    "people": 12
+  },
+  {
+    "activity": "Escape Room",
+    "type": "adventure",
+    "environment": "indoor",
+    "cost": 5000,
+    "people": 4
+  },
+  {
+    "activity": "Board Games",
+    "type": "indoor",
+    "environment": "indoor",
+    "cost": 1000,
+    "people": 6
+  },
+  {
+    "activity": "Picnic",
+    "type": "outdoor",
+    "environment": "outdoor",
+    "cost": 50000,
+    "people": 5
+  },
+  {
+    "activity": "Dinner at Restaurant",
+    "type": "food",
+    "environment": "indoor",
+    "cost": 2400,
+    "people": 3
+  },
+  {
+    "activity": "Bowling",
+    "type": "entertainment",
+    "environment": "indoor",
+    "cost": 900,
+    "people": 2
+  },
+  {
+    "activity": "Grocery Shopping",
+    "type": "necessity",
+    "environment": "indoor",
+    "cost": 3200,
+    "people": 1
+  },
+  {
+    "activity": "Gym Workout",
+    "type": "fitness",
+    "environment": "indoor",
+    "cost": 500,
+    "people": 1
+  },
+  {
+    "activity": "Road Trip",
+    "type": "travel",
+    "environment": "outdoor",
+    "cost": 4500,
+    "people": 4
+  },
+  {
+    "activity": "Coffee Meetup",
+    "type": "social",
+    "environment": "indoor",
+    "cost": 600,
+    "people": 2
+  },
+  {
+    "activity": "Theme Park Visit",
+    "type": "entertainment",
+    "environment": "outdoor",
+    "cost": 5200,
+    "people": 5
+  },
+  {
+    "activity": "Online Shopping",
+    "type": "misc",
+    "environment": "indoor",
+    "cost": 1800,
+    "people": 1
+  },
+  {
+    "activity": "Concert",
+    "type": "entertainment",
+    "environment": "indoor",
+    "cost": 3500,
+    "people": 3
+  },
+  {
+    "activity": "Beach Picnic",
+    "type": "outdoor",
+    "environment": "outdoor",
+    "cost": 700,
+    "people": 4
+  },
+  {
+    "activity": "Medical Checkup",
+    "type": "health",
+    "environment": "indoor",
+    "cost": 2000,
+    "people": 1
+  },
+  {
+    "activity": "Taxi Ride",
+    "type": "transport",
+    "environment": "outdoor",
+    "cost": 350,
+    "people": 1
+  },
+  {
+    "activity": "Salon Appointment",
+    "type": "personal care",
+    "environment": "indoor",
+    "cost": 900,
+    "people": 1
+  },
+  {
+    "activity": "Board Games Night",
+    "type": "entertainment",
+    "environment": "indoor",
+    "cost": 300,
+    "people": 5
+  },
+  {
+    "activity": "Shopping Mall Visit",
+    "type": "social",
+    "environment": "indoor",
+    "cost": 2600,
+    "people": 3
+  },
+  {
+    "activity": "Camping Trip",
+    "type": "outdoor",
+    "environment": "outdoor",
+    "cost": 3800,
+    "people": 4
+  },
+  {
+    "activity": "Flight Booking",
+    "type": "travel",
+    "environment": "indoor",
+    "cost": 12000,
+    "people": 1
+  },
+  {
+    "activity": "Birthday Party",
+    "type": "social",
+    "environment": "indoor",
+    "cost": 5000,
+    "people": 10
+  },
+  {
+    "activity": "Spa Session",
+    "type": "personal care",
+    "environment": "indoor",
+    "cost": 2200,
+    "people": 1
+  },
+  {
+    "activity": "Cooking Class",
+    "type": "indoor",
+    "environment": "indoor",
+    "cost": 25000,
+    "people": 2
+  }
+]
