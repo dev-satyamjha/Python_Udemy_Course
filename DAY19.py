@@ -27,3 +27,30 @@ def grade(grade:int) ->str:
 print(grade(45))
 print(grade(100))
 print(grade(75))
+
+#Multiple Assignments
+
+a,b = 12, 10
+print(a)
+print(b)
+
+first,*middle,last = (12,24,36,48,60,72,84,96,108,120)
+print(first)
+print(middle)
+print(last)
+
+#is VS ==
+class Car:
+
+    def __init__(self, brand:str) ->None:
+        self.brand = brand
+
+
+car1: Car = Car('BMW')
+car2: Car = Car('BMW')
+
+print(car1 is car2)
+print(car1 == car2)
+
+print(car1.brand == car2.brand)
+print(1+1 == 2)
