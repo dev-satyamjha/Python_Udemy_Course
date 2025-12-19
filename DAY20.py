@@ -1,5 +1,5 @@
 from collections.abc import Iterator
-from enum import Enum
+from enum import Enum, auto
 #Lambda
 
 numbers: list[int] = [2,4,12,24,34]
@@ -52,3 +52,12 @@ create_square(color= 'Blue')
 print(Color.RED.name)
 print(Color.RED.value)
 print(list(Color))
+
+class Direction(Enum):
+    NORTH = 500
+    SOUTH= auto()
+    EAST = auto()
+    WEST = auto()
+
+for direction in list(Direction):
+    print(direction.name, direction.value)
