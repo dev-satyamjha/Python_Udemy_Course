@@ -5,7 +5,7 @@ import time
 class SlotMachine:
     def __init__(self, credits: int) -> None:
         self.credits = credits
-        self.symbol: dict[str, int] = {'🍒': 1, '🍊': 2, '🍋': 5}
+        self.symbol: dict[str, int] = {'🍒': 1, '🍊': 2, '🍉': 4, '🍋': 5}
 
     def spin(self, bet: int) -> None:
         if bet <= 0:
@@ -20,7 +20,7 @@ class SlotMachine:
             return
 
         result: list[str] = []
-        for _ in range(3):
+        for _ in range(4):
             time.sleep(0.2)
             landed: str = random.choice(seq= list(self.symbol))
             print(landed, end= '', flush=True)
@@ -41,18 +41,14 @@ class SlotMachine:
             print('-'*30)
 
     def calculate_winnings(self, result : list[str], bet: int):
-        previous: str = result[0]
-        winnings: list[int] = []
+        if result[0] == result[1] == result[2] == result[3]:
+            return self.symbol[result[0]] * bet * 4
+        if result[0] == result[1] == result[2]:
+            return (self.symbol[result[0]] * bet) // 3
+        if result[0] == result[1]:
+            return (self.symbol[result[0]] * bet) // 2
 
-        for symbol in result:
-            if symbol == previous:
-                winnings.append(self.symbol[symbol])
-            else:
-                winnings.clear()
-                break
-
-        return sum(winnings) * bet
-
+        return 0
 
     def update_credits(self, amount: int):
         self.credits += amount
