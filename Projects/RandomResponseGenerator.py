@@ -35,4 +35,4 @@ if __name__ == "__main__":
     with open("responses.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 
-    print("Generated 100000 responses → responses.json")
+    print(f"Generated {len(data)} responses → responses.json")
